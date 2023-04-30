@@ -1,0 +1,82 @@
+* {
+    font-family: Source Code Pro, sans-serif;
+}
+html,body{
+    padding: 0;
+    height: 100%;
+    margin:0
+}
+
+body {
+    background-color: #080808;
+}
+
+
+.custom_title {
+    text-align: center;
+    color: #0F0;
+    display: block;
+    font-size: 50px;
+    background-color: black;
+    padding: 40px ;
+    margin: 0;
+}
+
+.custom_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.custom_card {
+    margin: 10px;
+    padding: 5px;
+    width: 150px;
+    height: 200px;
+    border-radius: 5%;
+    border: 2px #0F0 solid;
+    box-shadow: 10px 10px 0px #0F0;
+    cursor:pointer;
+    animation: blur_out 1s ease-in-out forwards;
+    background-color: #000;
+    position: relative;
+}
+
+@keyframes blur_out {
+    from {
+      filter: blur(100px);
+    }
+    to {
+      filter: none;
+    }
+  }
+
+.bookmark {
+    position: absolute; /* para posicionar el svg dentro del div */
+    top: -11px; /* para alinear el svg en la parte superior del div */
+    right: 10px; /* para alinear el svg en la parte derecha del div */
+    width: 30px; /* ajustar el tamaño del svg */
+    height: 50px; /* ajustar el tamaño del svg */
+}
+  
+.custom_card:hover {
+    transform: scale(105%);
+}
+
+.custom_card h3 {
+    color: #0F0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.custom_card p {
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    margin-top: 10px;
+}
